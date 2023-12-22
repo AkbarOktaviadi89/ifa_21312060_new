@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class KaryawanController extends GetxController {
-  //TODO: Implement MahasiswaController
+  //TODO: Implement KaryawanController
   late TextEditingController cNo_karyawan;
   late TextEditingController cNama_karyawan;
   late TextEditingController cJabatan_karyawan;
@@ -61,19 +61,19 @@ class KaryawanController extends GetxController {
     return docRef.get();
   }
 
-  void Update(String no_karyawan, String nama_karyawan, String id ,String jabatan_karyawan) async {
-    DocumentReference karyawanById =firestore.collection("karyawan_21312060").doc(id);
+  void Update(String no_karyawan, String nama_karyawan, String jabatan_karyawan ,String id) async {
+    DocumentReference mahasiswaById = firestore.collection("karyawan_21312060").doc(id);
 
     try {
-      await karyawanById.update({
+      await mahasiswaById.update({
         "no_karyawan": no_karyawan,
         "nama_karyawan": nama_karyawan,
-        "jabatan_karyawan": jabatan_karyawan,
+        "jabatan_karyawan": jabatan_karyawan
       });
 
       Get.defaultDialog(
         title: "Berhasil",
-        middleText: "Berhasil mengubah data Karyawan.",
+        middleText: "Berhasil mengubah data karyawan.",
         onConfirm: () {
           cNo_karyawan.clear();
           cNama_karyawan.clear();

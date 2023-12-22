@@ -10,7 +10,7 @@ class KaryawanUpdateView extends GetView<KaryawanController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Ubah karyawan'),
+        title: const Text('Ubah Karyawan'),
         centerTitle: true,
       ),
       body: FutureBuilder<DocumentSnapshot<Object?>>(
@@ -29,7 +29,7 @@ class KaryawanUpdateView extends GetView<KaryawanController> {
                     controller: controller.cNo_karyawan,
                     autocorrect: false,
                     textInputAction: TextInputAction.next,
-                    decoration: InputDecoration(labelText: "No_karyawan"),
+                    decoration: InputDecoration(labelText: "no_karyawan"),
                   ),
                   SizedBox(
                     height: 10,
@@ -37,7 +37,7 @@ class KaryawanUpdateView extends GetView<KaryawanController> {
                   TextField(
                     controller: controller.cNama_karyawan,
                     textInputAction: TextInputAction.done,
-                    decoration: InputDecoration(labelText: "Nama_karyawan"),
+                    decoration: InputDecoration(labelText: "nama_karyawan"),
                   ),
                   SizedBox(
                     height: 10,
@@ -45,7 +45,7 @@ class KaryawanUpdateView extends GetView<KaryawanController> {
                   TextField(
                     controller: controller.cJabatan_karyawan,
                     textInputAction: TextInputAction.done,
-                    decoration: InputDecoration(labelText: "Jabatan_karyawan"),
+                    decoration: InputDecoration(labelText: "jabatan_karyawan"),
                   ),
                   SizedBox(
                     height: 30,
@@ -72,3 +72,4 @@ class KaryawanUpdateView extends GetView<KaryawanController> {
     );
   }
 }
+
